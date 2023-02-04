@@ -1,3 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*type TopCarsType = {
     manufacturer: string
     model: string
@@ -25,6 +42,7 @@ export const Demo = (props: CarsType) => {
     )
 }*/
 
+/*
 export function Demo (){
 
 return (
@@ -33,4 +51,4 @@ return (
         </div>
     )
 
-}
+}*/

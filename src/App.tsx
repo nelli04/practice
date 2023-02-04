@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {TASKS} from "./Demo/TASKS";
 import {Demo} from "./Demo/demo";
@@ -137,11 +137,28 @@ function App() {
     const Button2 = (sub: string, age: number) => {
         console.log(sub, age)
     }
+    const Button3 = () => {
+        console.log('Im stuped buttom')
+    }
+    //let a = 1;
+    let[a, setA] = useState(1)
+    const onClicks = () => {
+        setA(++a)
+        console.log(a)
+    }
+    const onClicks1 = () => {
+        setA(--a)
+        console.log(a)
+    }
 
     return (
         <div className="App">
-            <Button name={'ClickME'} callBAck={() => Button1('Hi', 19)}/>
-            <Button name={'ClickME2'} callBAck={() =>Button2('Hello',32)}/>
+            <h1>{a}</h1>
+            <button onClick={onClicks}>number</button>
+            <button onClick={onClicks1}>0</button>
+            {/*<Button name={'ClickME'} callBack={() => Button1('Hi', 19)}/>
+            <Button name={'ClickME2'} callBack={() =>Button2('Hello',32)}/>
+            <Button name={'Click'} callBack={Button3}/>*/}
            {/* <Demo/>*/}
            {/* <TASKS title={data1.title} tasks={data1.tasks} students={data1.students} />
             <TASKS title={data2.title} tasks={data2.tasks} students={data2.students} />*/}
@@ -150,8 +167,6 @@ function App() {
 }
 
 export default App;
-
-
 
 
 
