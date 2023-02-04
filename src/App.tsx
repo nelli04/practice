@@ -131,17 +131,17 @@ const topCars = [
     {manufacturer: 'Audi', model: 'rs6'}
 ]
 function App() {
-    const Button1 = () => {
-        alert('Hi')
+    const Button1 = (sub: string, age: number) => {
+        console.log(sub, age)
     }
-    const Button2 = () => {
-        alert('Hello')
+    const Button2 = (sub: string, age: number) => {
+        console.log(sub, age)
     }
 
     return (
         <div className="App">
-            <Button name={'ClickME'} callBAck={Button1}/>
-            <Button name={'ClickME2'} callBAck={Button2}/>
+            <Button name={'ClickME'} callBAck={() => Button1('Hi', 19)}/>
+            <Button name={'ClickME2'} callBAck={() =>Button2('Hello',32)}/>
            {/* <Demo/>*/}
            {/* <TASKS title={data1.title} tasks={data1.tasks} students={data1.students} />
             <TASKS title={data2.title} tasks={data2.tasks} students={data2.students} />*/}
