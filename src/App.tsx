@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import {TASKS} from "./TASKS";
-import {Demo} from "./demo";
+import {TASKS} from "./Demo/TASKS";
+import {Demo} from "./Demo/demo";
+import {Button} from "./Demo/Button";
 
 
 
@@ -130,9 +131,18 @@ const topCars = [
     {manufacturer: 'Audi', model: 'rs6'}
 ]
 function App() {
+    const Button1 = () => {
+        alert('Hi')
+    }
+    const Button2 = () => {
+        alert('Hello')
+    }
+
     return (
         <div className="App">
-            <Demo/>
+            <Button name={'ClickME'} callBAck={Button1}/>
+            <Button name={'ClickME2'} callBAck={Button2}/>
+           {/* <Demo/>*/}
            {/* <TASKS title={data1.title} tasks={data1.tasks} students={data1.students} />
             <TASKS title={data2.title} tasks={data2.tasks} students={data2.students} />*/}
         </div>
