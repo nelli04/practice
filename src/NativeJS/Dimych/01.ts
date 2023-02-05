@@ -15,3 +15,6 @@ export function sentenseSplit(sentence: string) {
             .replace(',', '')
             .replace('.', ''))
 }
+
+//https://habr.com/ru/company/ruvds/blog/347866/
+
