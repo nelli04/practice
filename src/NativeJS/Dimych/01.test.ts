@@ -1,4 +1,13 @@
 import {mult, sentenseSplit, sum} from "./01";
+let a: number;
+let b: number;
+let c: number;
+
+beforeEach(() => {
+    a = 1
+    b = 2
+    c = 3
+})
 
 test ('sum should be correct', () =>{
     const a = 1
@@ -10,9 +19,7 @@ test ('sum should be correct', () =>{
     expect(result).toBe(3)
 })
 test ('sum should be correct', () =>{
-    const a = 1
-    const b = 2
-    const c = 3
+
 
     const result = mult(a, b)
 
