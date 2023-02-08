@@ -34,12 +34,10 @@ function App() {
         {id: 4, title: "Rest API", isDone: false},
         {id: 5, title: "GraphQL", isDone: false},
     ]);
-
     function removeTask(id: number) {
         let filteredTasks = tasks.filter(t => t.id != id);
         setTasks(filteredTasks);
     }
-
     return (
         <div className="App">
             <Todolist title="What to learn"
