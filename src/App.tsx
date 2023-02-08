@@ -1,56 +1,114 @@
 import React, {useState} from 'react';
 import './App.css';
+import {Todolist} from './Todolist';
 
-// Hi Guys!
-// Let's reinforce our current session!
-// -You have 2 arrays. You should create a new component TASKS, where you will render these arrays.
-// -Don't forget to assign types to our data.
+export type FilterValuesType = "all" | "active" | "completed" | "delete" | "treeTask";
 
-type Filter = 'all' | 'RUBLS' | 'Dollars'
+//Hi guys!
+//1. Let's create a 'DELETE ALL TASKS' button, and place it above the filter buttons
+//Clicking the button removes all tasks
+//2. Let's create a fourth filter button-if you click it, the first three tasks will be displayed
+//3. Relocate everything associated with  filters to the Todolist.tsx component. Make it work
+//
+// let [filter, setFilter] = useState<FilterValuesType>("all");
+//
+// let tasksForTodolist = tasks;
+//
+// if (filter === "active") {
+//     tasksForTodolist = tasks.filter(t => t.isDone === false);
+// }
+// if (filter === "completed") {
+//     tasksForTodolist = tasks.filter(t => t.isDone === true);
+// }
+//
+// function changeFilter(value: FilterValuesType) {
+//     setFilter(value);
+// }
 
 function App() {
-    const [money, setMoney] = useState([
-        {banknots: 'Dollars', value: 100, number: ' a1234567890'},
-        {banknots: 'Dollars', value: 50, number: ' z1234567890'},
-        {banknots: 'RUBLS', value: 100, number: ' w1234567890'},
-        {banknots: 'Dollars', value: 100, number: ' e1234567890'},
-        {banknots: 'Dollars', value: 50, number: ' c1234567890'},
-        {banknots: 'RUBLS', value: 100, number: ' r1234567890'},
-        {banknots: 'Dollars', value: 50, number: ' x1234567890'},
-        {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
-    ])
-    let [fil, setFil] = useState<Filter>('all')
-    let filtered = money
-    if (fil === 'RUBLS') {
-        filtered = money.filter(mFilter => mFilter.banknots === 'RUBLS')
-    }
-    if (fil === 'Dollars') {
-        filtered = money.filter(mFilter => mFilter.banknots === 'Dollars')
-    }
-    const handler = (nameBut: Filter) => {
-        setFil(nameBut)
-    }
-    return (
-        <>
-            <ul>
-                {filtered.map((m, index) => {
-                    return (
 
-                        <li key={index}>
-                            <span>{m.banknots}</span>
-                            <span>{m.value}</span>
-                            <span>{m.number}</span>
-                        </li>
-                    )
-                })}
-            </ul>
-            <div style={{marginLeft: '35px'}}>
-                <button onClick={() => handler('all')}>all</button>
-                <button onClick={() => handler('RUBLS')}>rubles</button>
-                <button onClick={() => handler('Dollars')}>dollars</button>
-            </div>
-        </>
+    let [tasks, setTasks] = useState([
+        {id: 1, title: "HTML&CSS", isDone: true},
+        {id: 2, title: "JS", isDone: true},
+        {id: 3, title: "ReactJS", isDone: false},
+        {id: 4, title: "Rest API", isDone: false},
+        {id: 5, title: "GraphQL", isDone: false},
+    ]);
+
+    function removeTask(id: number) {
+        let filteredTasks = tasks.filter(t => t.id != id);
+        setTasks(filteredTasks);
+    }
+
+    return (
+        <div className="App">
+            <Todolist title="What to learn"
+                      tasks={tasks}
+                      removeTask={removeTask}
+                      //changeFilter={changeFilter}
+            />
+        </div>
     );
 }
 
 export default App;
+
+
+//-------------------------------------------------------------------------
+
+// import React, {useState} from 'react';
+// import './App.css';
+// import {Todolist} from './Todolist';
+//
+//
+// export type FilterValuesType = "all" | "active" | "completed" | "three";
+//
+// function App() {
+//
+//     let [tasks, setTasks] = useState([
+//         {id: 1, title: "HTML&CSS", isDone: true},
+//         {id: 2, title: "JS", isDone: true},
+//         {id: 3, title: "ReactJS", isDone: false},
+//         {id: 4, title: "Rest API", isDone: false},
+//         {id: 5, title: "GraphQL", isDone: false},
+//     ]);
+//
+//     const deleteAllTasks = () => {
+//         setTasks([])
+//     }
+//
+//     function removeTask(id: number) {
+//         let filteredTasks = tasks.filter(t => t.id != id);
+//         setTasks(filteredTasks);
+//     }
+//
+//     // let [filter, setFilter] = useState<FilterValuesType>("all");
+//     //
+//     // let tasksForTodolist = tasks;
+//     //
+//     // if (filter === "active") {
+//     //     tasksForTodolist = tasks.filter(t => t.isDone === false);
+//     // }
+//     // if (filter === "completed") {
+//     //     tasksForTodolist = tasks.filter(t => t.isDone === true);
+//     // }
+//     //
+//     // function changeFilter(value: FilterValuesType) {
+//     //     setFilter(value);
+//     // }
+//
+//     return (
+//         <div className="App">
+//             <Todolist
+//                 title="What to learn"
+//                 tasks={tasks}
+//                 removeTask={removeTask}
+//                 //changeFilter={changeFilter}
+//                 deleteAllTasks={deleteAllTasks}
+//
+//             />
+//         </div>
+//     );
+// }
+//
+// export default App;
