@@ -39,14 +39,11 @@ function App() {
         let filteredTasks = tasks.filter(t => t.id != id);
         setTasks(filteredTasks);
     }
-
     return (
         <div className="App">
             <Todolist title="What to learn"
                       tasks={tasks}
-                      removeTask={removeTask}
-                      //changeFilter={changeFilter}
-            />
+                      removeTask={removeTask}/>
         </div>
     );
 }
