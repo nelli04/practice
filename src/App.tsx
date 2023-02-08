@@ -44,9 +44,7 @@ function App() {
         <div className="App">
             <Todolist title="What to learn"
                       tasks={tasks}
-                      removeTask={removeTask}
-                      //changeFilter={changeFilter}
-            />
+                      removeTask={removeTask}/>
         </div>
     );
 }
