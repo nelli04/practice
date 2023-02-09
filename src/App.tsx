@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Todolist} from './Todolist';
-import {OnOff} from "./NativeJS/Dimych/OnOff/OnOff";
-import {Accordion} from "./NativeJS/Dimych/React/Accordion";
-import {Rating} from "./NativeJS/Dimych/React/Rating";
+import {OnOff} from "./MONDAY/NativeJS/Dimych/React/OnOff/OnOff";
 
 
 export type FilterValuesType = "all" | "active" | "completed" | "delete" | "treeTask";
