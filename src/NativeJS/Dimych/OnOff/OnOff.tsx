@@ -2,24 +2,34 @@ import React from 'react';
 import on from './OnOff.module.css'
 
 
-type onOffType = {
-    value: true | false
+type OnOffType = {
+    collapsed: string
 }
 
-
-export function OnOff(props: onOffType) {
+export function OnOff(props: OnOffType) {
     return (
         <div className={on.but}>
-            <div className={on.on}>
-                {!props.value}
-                ON
-            </div>
-            <div className={on.off}>
-                {props.value === false}
-                OFF
-            </div>
-            <div><input type={'radio'}/></div>
+            <On title={'On'}/>
+            {!props.collapsed && <Off/>}
+        </div>
+    )
+}
+type OnType = {
+    title: string
+}
 
+function On (props: OnType) {
+    return (
+        <div className={on.on}>
+            {props.title}
+        </div>
+    )
+}
+
+function Off () {
+    return (
+        <div className={on.off}>
+            OFF
         </div>
     )
 }
