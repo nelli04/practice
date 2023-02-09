@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Todolist} from './Todolist';
+import {OnOff} from "./NativeJS/Dimych/OnOff/OnOff";
+import {Accordion} from "./NativeJS/Dimych/React/Accordion";
+import {Rating} from "./NativeJS/Dimych/React/Rating";
+
 
 export type FilterValuesType = "all" | "active" | "completed" | "delete" | "treeTask";
 
@@ -26,8 +30,24 @@ export type FilterValuesType = "all" | "active" | "completed" | "delete" | "tree
 // }
 
 function App() {
+    return (
+        <>
+            <Rating value={0}/>
+            <Rating value={1}/>
+            <Rating value={2}/>
+            <Rating value={3}/>
+            <Rating value={4}/>
+            <Rating value={5}/>
+            <Accordion />
+        </>
+    )
+}
 
-    let [tasks, setTasks] = useState([
+
+export default App;
+
+
+/* let [tasks, setTasks] = useState([
         {id: 1, title: "HTML&CSS", isDone: true},
         {id: 2, title: "JS", isDone: true},
         {id: 3, title: "ReactJS", isDone: false},
@@ -44,11 +64,7 @@ function App() {
                       tasks={tasks}
                       removeTask={removeTask}/>
         </div>
-    );
-}
-
-export default App;
-
+    );*/
 
 //-------------------------------------------------------------------------
 
