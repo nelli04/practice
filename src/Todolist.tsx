@@ -1,3 +1,4 @@
+/*
 import React, {useState} from 'react';
 import {FilterValuesType} from './App';
 
@@ -169,4 +170,4 @@ export function Todolist(props: PropsType) {
 //             </button>
 //         </div>
 //     </div>
-// }
+// }*/
