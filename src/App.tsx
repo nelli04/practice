@@ -36,21 +36,23 @@ function App() {
         setMessage([ newMessage, ...message])
     }
 
-    let [message, setMessage] = useState([
-            {message: 'message1'},
-            {message: 'message3'},
-            {message: 'message2'},
-        ]
-    )
 
-    let[title, setTitle] = useState('')
+
+   let[title, setTitle] = useState('')
     console.log(title)
+
 
     const onClickButtonHandler = () => {
         addMessage(title)
         setTitle('')
     }
 
+     let [message, setMessage] = useState([
+        {message: 'message1'},
+        {message: 'message3'},
+        {message: 'message2'},
+    ]
+)
     return (
         <div>
             {/*<FullInput addMessage={addMessage}/>*/}
