@@ -29,7 +29,6 @@ function App() {
 )
     return (
         <div>
-            {/*<FullInput addMessage={addMessage}/>*/}
             <Input setTitle={setTitle} title={title}/>
             <Button name={'+'} callBack={onClickButtonHandler}/>
             {message.map((m, index) => {
