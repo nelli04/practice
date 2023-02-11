@@ -12,8 +12,6 @@ function App() {
         setMessage([ newMessage, ...message])
     }
 
-
-
    let[title, setTitle] = useState('')
     console.log(title)
 
