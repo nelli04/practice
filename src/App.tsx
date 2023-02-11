@@ -1,8 +1,5 @@
 import React, {useState} from 'react';
 import './App.css';
-//import {Todolist} from './Todolist';
-import {OnOff} from "./MONDAY/NativeJS/Dimych/React/OnOff/OnOff";
-import {FullInput} from "./FullInput";
 import {Input} from "./Input";
 import Button from "./Button";
 
