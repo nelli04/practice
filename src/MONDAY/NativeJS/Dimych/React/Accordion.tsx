@@ -19,7 +19,6 @@ export function Accordion(props: AccordionType) {
         )
 }
 
-
 function AccordionTitle(props: AccordionPropsType) {
     return (
         <h3>{props.title}</h3>
