@@ -67,23 +67,6 @@ function App() {
         </div>
     )
 }
-{/*<div>
-                <input/>
-                <button>+</button>
-            </div>*/}
-
-{/*<Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
-            <Accordion titleV={'Menu'} collapsed={true}/>
-            <Accordion titleV={'Menu1'} collapsed={false}/>*/
-}
-{/*<OnOff collapsed={`${true}${false}`}/>
-            <OnOff collapsed={`false`}/>//train*/
-}
 export default App;
 
 
