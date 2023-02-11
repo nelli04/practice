@@ -11,7 +11,7 @@ const Button = (props: ButtonPropsType) => {
     }
 
     return (
-       <button onClick={onClickButtonHandler}>{props.name}</button>
+        <button onClick={onClickButtonHandler}>{props.name}</button>
     );
 };
 
