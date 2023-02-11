@@ -1,6 +1,4 @@
 import React from 'react';
-import on from './OnOff.module.css'
-
 
 type OnOffType = {
     collapsed: string
@@ -8,7 +6,7 @@ type OnOffType = {
 
 export function OnOff(props: OnOffType) {
     return (
-        <div className={on.but}>
+        <div /*className={on.but}*/>
             <On title={'On'}/>
             {!props.collapsed && <Off/>}
         </div>
@@ -20,7 +18,7 @@ type OnType = {
 
 function On (props: OnType) {
     return (
-        <div className={on.on}>
+        <div /*className={on.on}*/>
             {props.title}
         </div>
     )
@@ -28,7 +26,7 @@ function On (props: OnType) {
 
 function Off () {
     return (
-        <div className={on.off}>
+        <div /*className={on.off}*/>
             OFF
         </div>
     )
