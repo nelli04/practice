@@ -25,7 +25,6 @@ function AccordionTitle(props: AccordionPropsType) {
     )
 }
 
-
 function AccordionBody() {
     return (
         <div>
