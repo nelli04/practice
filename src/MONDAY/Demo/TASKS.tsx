@@ -12,7 +12,9 @@ export const TASKS = (props: DataType) => {
     return (
         <ul>
             <li>
-                {props.students.map((DataType) => {return (DataType)})}
+                {props.students.map((DataType) => {
+                    return (DataType)
+                })}
             </li>
         </ul>
     )
