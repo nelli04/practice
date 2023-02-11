@@ -6,10 +6,6 @@ import {FullInput} from "./FullInput";
 import {Input} from "./Input";
 import Button from "./Button";
 
-
-/*export type FilterValuesType = "all" | "active" | "completed" | "delete" | "treeTask";*/
-
-
 function App() {
     const addMessage = (title: string) => {
         let newMessage = {message: title}
