@@ -39,7 +39,6 @@ function App() {
 }
 export default App;
 
-
 //걸어본다 - B1A4; 내꺼하자 - INFINITE; 외톨이야 - CNBLUE
 
 /*
