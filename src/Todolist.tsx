@@ -1,3 +1,4 @@
+/*
 function sumTwoSmallestNumbers(numbers) {
     // numbers = numbers.sort((a, b) => a - b)
     for (let j = 0; j < numbers.length; j++) {
@@ -12,6 +13,7 @@ function sumTwoSmallestNumbers(numbers) {
 
     return numbers[0] + numbers[1]
 }
+*/
 
 
 
