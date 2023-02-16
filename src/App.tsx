@@ -5,6 +5,7 @@ import Button from "./Button";
 import {OnOff} from "./MONDAY/NativeJS/Dimych/React/OnOff/OnOff";
 import {Accordion} from "./MONDAY/NativeJS/Dimych/React/Accordion";
 import {AccordionOnOff} from "./MONDAY/NativeJS/Dimych/React/AccordionOnOff";
+import {RatingOnOff} from "./MONDAY/NativeJS/Dimych/React/RatingOnOff";
 
 function App() {
     /*const addMessage = (title: string) => {
@@ -29,9 +30,10 @@ function App() {
 )*/
     return (
         <div>
+            <RatingOnOff/>
             {/*<OnOff />*/}
-            <AccordionOnOff titleV={'Menu1'}/>
-            <AccordionOnOff titleV={'Menu2'}/>
+           {/* <AccordionOnOff titleV={'Menu1'}/>*/}
+            {/*<AccordionOnOff titleV={'Menu2'}/>*/}
             {/*<OnOff on={false}/>
             <OnOff on={true}/>*/}
 
