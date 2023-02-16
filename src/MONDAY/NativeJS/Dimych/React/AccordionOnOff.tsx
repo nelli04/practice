@@ -12,12 +12,6 @@ type AccordionPropsType = {
 export function AccordionOnOff(props: AccordionType) {
 
     let [collapsed, setCollapsed] = useState(true)
-    /*if (collapsed === true) {
-        return () => setCollapsed(true)
-    } else {
-        return () => setCollapsed(false)
-    }
-*/
         return (
             <div>
                 {<AccordionTitle title={props.titleV} />} <button onClick={() => setCollapsed( collapsed ? false : true)}>TOGGLE</button>
