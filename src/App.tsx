@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import './App.css';
 import {Input} from "./Input";
 import Button from "./Button";
+import {OnOff} from "./MONDAY/NativeJS/Dimych/React/OnOff/OnOff";
 
 function App() {
-    const addMessage = (title: string) => {
+    /*const addMessage = (title: string) => {
         let newMessage = {message: title}
         setMessage([ newMessage, ...message])
     }
@@ -23,17 +24,21 @@ function App() {
         {message: 'message3'},
         {message: 'message2'},
     ]
-)
+)*/
     return (
         <div>
-            <Input setTitle={setTitle} title={title}/>
+            <OnOff />
+            {/*<OnOff on={false}/>
+            <OnOff on={true}/>*/}
+
+            {/*<Input setTitle={setTitle} title={title}/>
             <Button name={'+'} callBack={onClickButtonHandler}/>
             {message.map((m, index) => {
                 return (
                     <div key={index}>{m.message}</div>
                 )
             })
-            }
+            }*/}
         </div>
     )
 }
