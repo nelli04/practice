@@ -6,6 +6,8 @@ import {OnOff} from "./MONDAY/NativeJS/Dimych/React/OnOff/OnOff";
 import {Accordion} from "./MONDAY/NativeJS/Dimych/React/Accordion";
 import {AccordionOnOff} from "./MONDAY/NativeJS/Dimych/React/AccordionOnOff";
 import {RatingOnOff} from "./MONDAY/NativeJS/Dimych/React/RatingOnOff";
+import {Todolist} from "./src/Todolist";
+import AppTodo from "./src/AppTodo";
 
 function App() {
     /*const addMessage = (title: string) => {
@@ -29,14 +31,14 @@ function App() {
     ]
 )*/
     return (
-        <div className={'App'}>
-            <RatingOnOff/>
+        <div /*className={'AppTodo'}*/>
+            <AppTodo/>
+            {/*<RatingOnOff/>*/}
             {/*<OnOff />*/}
            {/* <AccordionOnOff titleV={'Menu1'}/>*/}
             {/*<AccordionOnOff titleV={'Menu2'}/>*/}
             {/*<OnOff on={false}/>
             <OnOff on={true}/>*/}
-
             {/*<Input setTitle={setTitle} title={title}/>
             <Button name={'+'} callBack={onClickButtonHandler}/>
             {message.map((m, index) => {
