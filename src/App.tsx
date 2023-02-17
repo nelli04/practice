@@ -6,7 +6,6 @@ import {OnOff} from "./MONDAY/NativeJS/Dimych/React/OnOff/OnOff";
 import {Accordion} from "./MONDAY/NativeJS/Dimych/React/Accordion";
 import {AccordionOnOff} from "./MONDAY/NativeJS/Dimych/React/AccordionOnOff";
 import {RatingOnOff} from "./MONDAY/NativeJS/Dimych/React/RatingOnOff";
-import {Todolist} from "./src/Todolist";
 import AppTodo from "./src/AppTodo";
 
 function App() {
