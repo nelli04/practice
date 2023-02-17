@@ -49,7 +49,7 @@ function sumTwoSmallestNumbers(numbers) {
 
 /*
 import React, {useState} from 'react';
-import {FilterValuesType} from './App';
+import {FilterValuesType} from './AppTodo';
 
 type TaskType = {
     id: number
@@ -152,7 +152,7 @@ export function Todolist(props: PropsType) {
 //------------------------------------------------------------------------------------------------
 
 // import React, {useState} from 'react';
-// import {FilterValuesType} from './App';
+// import {FilterValuesType} from './AppTodo';
 //
 // type TaskType = {
 //     id: number
