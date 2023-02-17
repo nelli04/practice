@@ -29,7 +29,7 @@ function App() {
     ]
 )*/
     return (
-        <div>
+        <div className={'App'}>
             <RatingOnOff/>
             {/*<OnOff />*/}
            {/* <AccordionOnOff titleV={'Menu1'}/>*/}
