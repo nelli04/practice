@@ -36,22 +36,27 @@ export function Todolist(props: PropsType) {
         }
     }
     const removeTodolistHandler = () => {
-        props.removeTodolist(props.id)
+        {props.removeTodolist(props.id)}
     }
     const addTaskHandler = () => {
-        props.addTask(title, props.id)
-        setTitle('')
+        {props.addTask(title, props.id)}
     }
-    const removeTaskHandler = (TaskId: string) => {
-        props.removeTask(TaskId, props.id)
+    const removeTaskHandler = (tasksId: string) => {
+        {props.removeTask(tasksId, props.id)}
     }
-    const buttonButtonHandler = (valueButton: FilterValuesType) => {
-        props.changeFilter(valueButton, props.id)
+    const allButtonClickHandler = (value: FilterValuesType) => {
+        {props.changeFilter(value, props.id)}
     }
+    /*const activeButtonClickHandler = () => {
+
+    }
+    const completedButtonClickHandler = () => {
+
+    }*/
 
     return <div>
         <h3> {props.title}
-            <SupperButton callback={removeTodolistHandler} name={'x'}/>
+            <SupperButton callback={removeTodolistHandler} name={'removeTodolist'}/>
         </h3>
         <div>
             <input value={title}
@@ -73,18 +78,15 @@ export function Todolist(props: PropsType) {
                     return <li key={t.taskId} className={t.isDone ? "is-done" : ""}>
                         <input type="checkbox" onChange={onChangeHandler} checked={t.isDone}/>
                         <span>{t.title}</span>
-                        <SupperButton callback={()=>removeTaskHandler(t.taskId)} name={'removeTask'}/>
+                        <SupperButton callback={()=> removeTaskHandler(t.taskId) } name={'removeTask'}/>
                     </li>
                 })
             }
         </ul>
         <div>
-            <SupperButton callback={()=>buttonButtonHandler('all')} name={'All'}/>
-            <SupperButton callback={()=>buttonButtonHandler('active')} name={'Active'}/>
-            <SupperButton callback={()=>buttonButtonHandler('completed')} name={'Completed'}/>
-            {/*<button className={props.filter === 'all' ? "active-filter" : ""} onClick={()=>{}}>All</button>
-            <button className={props.filter === 'active' ? "active-filter" : ""} onClick={()=>{}}>Active</button>
-            <button className={props.filter === 'completed' ? "active-filter" : ""} onClick={()=>{}}>Completed</button>*/}
+            <SupperButton callback={() => allButtonClickHandler('all')} name={'all'}/>
+            <SupperButton callback={() => allButtonClickHandler('active')} name={'active'}/>
+            <SupperButton callback={() => allButtonClickHandler('completed')} name={'completed'}/>
         </div>
         <p></p>
         {
