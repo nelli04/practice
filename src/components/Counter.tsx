@@ -7,8 +7,6 @@ type BossType = {
     click: number
 }
 
-
-
 export const Counter = (p: BossType) => {
 
     return (
