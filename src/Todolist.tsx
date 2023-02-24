@@ -1,3 +1,4 @@
+/*
 import React, {ChangeEvent, useState} from 'react';
 import {SupperButton} from "./components/supperButton";
 import {FilterTaskType, TasksType} from "./App";
@@ -60,7 +61,7 @@ export const Todolist = (props: TodolistPropsType) => {
 
 
 
-/*
+/!*
 
 
 export function Todolist(props: PropsType) {
@@ -153,4 +154,5 @@ type PropsType = {
 }
 
 
+*!/
 */
