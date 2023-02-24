@@ -9,7 +9,7 @@ import {Counter} from "./components/Counter";
 
 function App() {
 
-    let [click, setClick] = useState(0)
+    let [click, setClick] = useState<number>(0)
     const maxInc = 5;
 
     const buttonInc = () => {
