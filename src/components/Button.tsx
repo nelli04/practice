@@ -7,6 +7,7 @@ type BossType = {
     buttonInc: () => void
     buttonReset: () => void
     click: number
+    title: string
 }
 
 export const Button = (p: BossType) => {
