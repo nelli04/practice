@@ -12,7 +12,7 @@ export const Counter = (p: BossType) => {
     return (
         <div className='count'>
             <div className={p.click === 5 ? 'red' : 'num'}>{p.click}</div>
-            <Button buttonInc={p.buttonInc} buttonReset={p.buttonReset} click={p.click} title={'reset'}/>
+            <Button buttonInc={p.buttonInc} buttonReset={p.buttonReset} click={p.click}/>
             {/*<Button buttonInc={p.buttonInc} buttonReset={p.buttonReset} click={p.click} />*/}
         </div>
 
