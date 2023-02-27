@@ -1,4 +1,5 @@
 import {mult, sentenseSplit, sum} from "./01";
+
 let a: number;
 let b: number;
 let c: number;
@@ -25,7 +26,6 @@ test ('sum should be correct', () =>{
 
     expect(result).toBe(2)
 })
-
 test ('spliting into words should be correct', () => {
     const sents1 = 'Hello my friend'
     const sents2 = 'JS my friend'
