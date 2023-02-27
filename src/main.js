@@ -1,4 +1,28 @@
-const sm = document.getElementById('small')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------------------------------------------------------------------------------------
+/*const sm = document.getElementById('small')
 const md = document.getElementById('medium')
 const bg = document.getElementById('big')
 
@@ -19,10 +43,12 @@ sm.onclick = null
 
 sm.addEventListener('click', onClickHandler1)
 md.addEventListener('click', onClickHandler2)
-bg.addEventListener('click', onClickHandler3)
+bg.addEventListener('click', onClickHandler3)*/
+
 // addEventListener с помощью него можно нацепить несколько обработчиков событий
 // addEventListener позволяет рассматривать как погружение и всплытие
 //this ссылка на тот объект который вызываем
 // делегирование событий
 // Дефолтное поведение form and href
 // семантическая верстка
+//эндпоинт
