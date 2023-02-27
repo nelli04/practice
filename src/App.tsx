@@ -1,15 +1,17 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Accordion} from "./MONDAY/NativeJS/Dimych/React/Accordion";
+import {OnOff} from "./MONDAY/NativeJS/Dimych/React/OnOff/OnOff";
 
 
 function App() {
 
     let [acc, setAcc] = useState(false)
-
+    let [on, setOn] = useState(false)
     return (
      <div>
-         <Accordion collapsed={acc} titleV={'Menu'} on={() => {setAcc(!acc)}}/>
+         <OnOff On={(on) => {setOn(on)}} on={on}/>
+         {/*<Accordion collapsed={acc} titleV={'Menu'} on={() => {setAcc(!acc)}}/>*/}
      </div>
     )
 
