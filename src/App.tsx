@@ -1,3 +1,4 @@
+/*
 import React, {useState} from 'react';
 import './App.css';
 import {TaskType, Todolist} from './Todolist';
@@ -97,3 +98,4 @@ function App() {
 }
 
 export default App;
+*/
